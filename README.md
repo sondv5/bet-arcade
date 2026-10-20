@@ -111,7 +111,8 @@ The dev server starts on <http://localhost:5173>.
 | `npm run build` | Production build into `dist/`. |
 | `npm run preview` | Serve the production build locally. |
 | `npm run icons` | Regenerate PWA icons from `public/icons/icon.svg`. |
-| `npm run deploy:pages` | Build and publish `dist/` to the `gh-pages` branch. |
+| `npm run social` | Regenerate the 1280×640 social preview image. |
+| `npm run deploy:pages` | Build locally and trigger the GitHub Pages deployment. |
 
 ---
 
@@ -123,8 +124,8 @@ The project is a static bundle, so it can be hosted anywhere. It is currently li
 
 Two supported paths:
 
-1. **GitHub Actions** — push to `main`; the `Deploy to GitHub Pages` workflow builds and publishes automatically.
-2. **Manual `gh-pages` push** — `npm run deploy:pages` builds and force-pushes `dist/` to the `gh-pages` branch.
+1. **GitHub Actions (recommended)** — push to `main`; the `Deploy to GitHub Pages` workflow builds and publishes automatically.
+2. **Local trigger** — `npm run deploy:pages` builds locally and kicks off the same workflow, then waits for it to go green.
 
 Because the router is hash-based and `base` is set to `'./'`, the app works correctly from a sub-path such as `/bet-arcade/` with no extra configuration.
 
@@ -141,7 +142,7 @@ bet-arcade/
 │   ├── manifest.webmanifest
 │   └── sw.js               # Precache + runtime cache, offline support
 ├── scripts/
-│   ├── deploy-pages.mjs    # Builds and publishes to the gh-pages branch
+│   ├── deploy-pages.mjs    # Builds and triggers the Pages deployment
 │   ├── generate-icons.mjs  # Regenerates the PWA icon set
 │   └── generate-social-preview.mjs  # Renders the 1280×640 social preview
 ├── .github/
