@@ -1,14 +1,40 @@
 {
   "name": "bet-arcade",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
+  "description": "BÉT! — a 3D party arcade with 10 mini-games to pick a player, find the last-place loser, or split teams. PWA, offline, 8 languages.",
   "type": "module",
+  "license": "MIT",
+  "author": "Son Dong Van (sondv5)",
+  "homepage": "https://sondv5.github.io/bet-arcade/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sondv5/bet-arcade.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sondv5/bet-arcade/issues"
+  },
+  "keywords": [
+    "threejs",
+    "react",
+    "vite",
+    "pwa",
+    "game",
+    "party-game",
+    "webgl",
+    "i18n",
+    "mini-games"
+  ],
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "icons": "node scripts/generate-icons.mjs",
+    "social": "node scripts/generate-social-preview.mjs",
     "deploy:pages": "node scripts/deploy-pages.mjs"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
     "@fontsource/baloo-2": "^5.3.0",

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8fdcff"/>
+      <stop offset="55%" stop-color="#c9f0ff"/>
+      <stop offset="100%" stop-color="#ffe6b8"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7ee08a"/>
+      <stop offset="100%" stop-color="#4fc766"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#63d276"/>
+      <stop offset="100%" stop-color="#35a94f"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff5f7e"/>
+      <stop offset="100%" stop-color="#e02750"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd85e"/>
+      <stop offset="100%" stop-color="#ffb01f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0b3d2a" flood-opacity="0.28"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#123a2b" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <circle cx="1090" cy="132" r="74" fill="#ffe27a" opacity="0.85"/>
+  <circle cx="1090" cy="132" r="112" fill="#ffe27a" opacity="0.22"/>
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.92">
+    <ellipse cx="240" cy="120" rx="86" ry="38"/>
+    <ellipse cx="300" cy="106" rx="62" ry="30"/>
+    <ellipse cx="180" cy="112" rx="52" ry="26"/>
+    <ellipse cx="700" cy="82" rx="70" ry="30"/>
+    <ellipse cx="748" cy="72" rx="48" ry="24"/>
+  </g>
+
+  <!-- mountains -->
+  <polygon points="760,470 880,240 1000,470" fill="#b79bff"/>
+  <polygon points="880,240 930,340 830,340" fill="#e6dcff"/>
+  <polygon points="1030,470 1130,290 1230,470" fill="#9b7bff"/>
+  <polygon points="1130,290 1170,360 1090,360" fill="#d9cbff"/>
+
+  <!-- hills -->
+  <path d="M0 470 Q 200 400 420 452 T 820 440 T 1280 452 L1280 640 L0 640 Z" fill="url(#hill1)"/>
+  <path d="M0 540 Q 260 470 520 528 T 980 520 T 1280 528 L1280 640 L0 640 Z" fill="url(#hill2)"/>
+
+  <!-- trees -->
+  <g filter="url(#soft)">
+    <polygon points="-20,478 20,392 60,478" fill="#2f9e5c"/>
+    <rect x="13" y="476" width="14" height="26" fill="#8a5a3b"/>
+    <polygon points="1180,478 1222,384 1264,478" fill="#2f9e5c"/>
+    <rect x="1215" y="476" width="14" height="26" fill="#8a5a3b"/>
+  </g>
+
+  <!-- wheel on the right -->
+  <g transform="translate(980,300)" filter="url(#shadow)">
+    <circle r="118" fill="#ffffff"/>
+    <circle r="108" fill="#ff5f7e"/>
+    <g>
+      <path d="M0 0 L0 -108 A108 108 0 0 1 76.4 -76.4 Z" fill="#ffd85e"/>
+      <path d="M0 0 L76.4 -76.4 A108 108 0 0 1 108 0 Z" fill="#2ee6a6"/>
+      <path d="M0 0 L108 0 A108 108 0 0 1 76.4 76.4 Z" fill="#6aa9ff"/>
+      <path d="M0 0 L76.4 76.4 A108 108 0 0 1 0 108 Z" fill="#ff8ac4"/>
+      <path d="M0 0 L0 108 A108 108 0 0 1 -76.4 76.4 Z" fill="#ffb01f"/>
+      <path d="M0 0 L-76.4 76.4 A108 108 0 0 1 -108 0 Z" fill="#9b7bff"/>
+      <path d="M0 0 L-108 0 A108 108 0 0 1 -76.4 -76.4 Z" fill="#4fc766"/>
+      <path d="M0 0 L-76.4 -76.4 A108 108 0 0 1 0 -108 Z" fill="#ff5f7e"/>
+    </g>
+    <circle r="30" fill="#ffffff" stroke="#1d2b26" stroke-width="8"/>
+    <circle r="9" fill="#ff5f7e"/>
+  </g>
+
+  <!-- title block -->
+  <g transform="translate(96,150)">
+    <g filter="url(#soft)">
+      <rect x="-16" y="-24" width="500" height="164" rx="40" fill="#ffffff" opacity="0.94"/>
+    </g>
+    <text x="10" y="96" font-family="Verdana, DejaVu Sans, sans-serif" font-size="104" font-weight="bold" fill="url(#title)" letter-spacing="2">BÉT!</text>
+
+    <g transform="translate(0,178)" filter="url(#soft)">
+      <rect x="-4" y="-4" width="446" height="58" rx="29" fill="url(#badge)"/>
+      <text x="219" y="36" text-anchor="middle" font-family="Verdana, DejaVu Sans, sans-serif" font-size="26" font-weight="bold" fill="#4a2c00" letter-spacing="3">3D PARTY ARCADE</text>
+    </g>
+
+    <text x="0" y="300" font-family="Verdana, DejaVu Sans, sans-serif" font-size="30" fill="#123a2b" font-weight="bold">10 mini-games to pick a player,</text>
+    <text x="0" y="342" font-family="Verdana, DejaVu Sans, sans-serif" font-size="30" fill="#123a2b" font-weight="bold">find the loser, or split the team.</text>
+
+    <g transform="translate(0,376)">
+      <rect x="0" y="0" width="196" height="46" rx="23" fill="#ffffff" opacity="0.9"/>
+      <rect x="212" y="0" width="196" height="46" rx="23" fill="#ffffff" opacity="0.9"/>
+      <text x="98" y="31" text-anchor="middle" font-family="Verdana, DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#1d2b26">PWA · Offline</text>
+      <text x="310" y="31" text-anchor="middle" font-family="Verdana, DejaVu Sans, sans-serif" font-size="22" font-weight="bold" fill="#1d2b26">8 languages</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <text x="96" y="596" font-family="Verdana, DejaVu Sans, sans-serif" font-size="24" fill="#ffffff" opacity="0.95" font-weight="bold">sondv5.github.io/bet-arcade</text>
+</svg>
