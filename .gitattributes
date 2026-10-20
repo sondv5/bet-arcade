@@ -1,0 +1,17 @@
+# Normalize line endings
+* text=auto eol=lf
+
+# Keep binary assets intact
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.mp3 binary
+
+# Lockfiles should not be merged by diff tools
+package-lock.json -diff
