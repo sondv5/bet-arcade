@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#7ed0ff" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="BÉT! is a 3D arcade with 10 mini-games to pick a person, find the last-place loser, or split teams. No arguments, last is last." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="BÉT!" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <title>BÉT! — 3D Random Picker &amp; Team Maker</title>
+    <style>
+      html, body { margin: 0; background: #7ed0ff; }
+      #root { min-height: 100svh; }
+      .boot {
+        min-height: 100svh; display: grid; place-items: center;
+        background: linear-gradient(180deg, #5fc9ff 0%, #b8ecff 55%, #fff2c8 100%);
+        color: #17161a; font-family: "Segoe UI", system-ui, sans-serif; text-align: center;
+      }
+      .boot-icon { width: 84px; height: 84px; border-radius: 22px; border: 3px solid #17161a; box-shadow: 4px 5px 0 #17161a; }
+      .boot-mark {
+        display: inline-grid; grid-template-columns: repeat(3, 26px); gap: 6px;
+        transform: rotate(-6deg); margin-bottom: 18px;
+      }
+      .boot-mark span { width: 26px; height: 26px; border: 2px solid #17161a; border-radius: 7px; }
+      .boot-mark span:nth-child(1) { background: #ff5c4d; }
+      .boot-mark span:nth-child(2) { background: #ffc53d; }
+      .boot-mark span:nth-child(3) { background: #59d9a8; }
+      .boot p { font-size: 12px; letter-spacing: .22em; font-weight: 700; text-transform: uppercase; opacity: .6; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="boot">
+        <div>
+          <img class="boot-icon" src="./icons/icon-192.png" alt="BÉT!" width="84" height="84" />
+          <p>Entering the meadow…</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

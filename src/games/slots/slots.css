@@ -1,0 +1,7 @@
+.slots-root .game-hud {
+  pointer-events: none;
+}
+
+.slots-root .stage-controls {
+  pointer-events: auto;
+}

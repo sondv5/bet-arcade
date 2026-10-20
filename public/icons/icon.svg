@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fc3ff"/>
+      <stop offset="0.55" stop-color="#b8ecff"/>
+      <stop offset="1" stop-color="#fff4d4"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#68e69a"/>
+      <stop offset="1" stop-color="#2fc477"/>
+    </linearGradient>
+    <clipPath id="frame">
+      <rect width="512" height="512" rx="112"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="512" height="512" fill="url(#sky)"/>
+
+    <!-- sun -->
+    <circle cx="406" cy="107" r="55" fill="#ffd23f" stroke="#17161a" stroke-width="9"/>
+    <g stroke="#ffd23f" stroke-width="12" stroke-linecap="round">
+      <path d="M406 26v-16M406 204v16M477 107h16M319 107h-16"/>
+      <path d="M462 51l11-11M350 163l-11 11M462 163l11 11M350 51l-11-11"/>
+    </g>
+
+    <!-- clouds -->
+    <g fill="#fffaf1" stroke="#17161a" stroke-width="8" stroke-linejoin="round">
+      <path d="M64 133c0-17 14-31 31-31 7 0 13 2 18 6 8-13 22-21 39-21 25 0 45 20 45 45 0 2 0 4-1 6H72c-5-1-8-4-8-5Z"/>
+      <path d="M340 191c0-12 10-22 22-22 5 0 9 2 13 4 6-9 16-15 28-15 18 0 32 14 32 32 0 2 0 3-1 5H346c-4 0-6-2-6-4Z" opacity=".9"/>
+    </g>
+
+    <!-- hills -->
+    <path d="M-40 403c72-72 155-108 258-108 24 0 47 2 70 7 75 16 140 49 196 91v126H-40Z" fill="#59e294" stroke="#17161a" stroke-width="10"/>
+    <path d="M-30 441c92-63 190-95 294-95 85 0 172 25 262 76v90H-30Z" fill="url(#hill)" stroke="#17161a" stroke-width="10"/>
+
+    <!-- flowers -->
+    <g stroke="#17161a" stroke-width="5">
+      <g transform="translate(90 393)">
+        <path d="M0 22v34" stroke="#2aa663" stroke-width="6"/>
+        <circle cx="0" cy="0" r="13" fill="#fff0f5"/>
+        <circle cx="16" cy="6" r="13" fill="#fff0f5"/>
+        <circle cx="-16" cy="6" r="13" fill="#fff0f5"/>
+        <circle cx="0" cy="14" r="13" fill="#fff0f5"/>
+        <circle cx="0" cy="7" r="8" fill="#ffd23f"/>
+      </g>
+      <g transform="translate(426 418) scale(.8)">
+        <path d="M0 22v34" stroke="#2aa663" stroke-width="6"/>
+        <circle cx="0" cy="0" r="13" fill="#ff8fb8"/>
+        <circle cx="16" cy="6" r="13" fill="#ff8fb8"/>
+        <circle cx="-16" cy="6" r="13" fill="#ff8fb8"/>
+        <circle cx="0" cy="14" r="13" fill="#ff8fb8"/>
+        <circle cx="0" cy="7" r="8" fill="#fffaf1"/>
+      </g>
+    </g>
+
+    <!-- rabbit body -->
+    <g stroke="#17161a" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+      <ellipse cx="256" cy="379" rx="91" ry="88" fill="#fff4e3"/>
+      <circle cx="256" cy="271" r="83" fill="#fff4e3"/>
+      <!-- ears -->
+      <g>
+        <path d="M211 205c-28-48-31-100-10-111 22-12 48 31 53 82" fill="#fff4e3"/>
+        <path d="M231 196c-13-31-14-66-4-72 11-6 25 21 27 53" fill="#ffb3c7" stroke="none"/>
+        <path d="M301 205c28-48 31-100 10-111-22-12-48 31-53 82" fill="#fff4e3"/>
+        <path d="M281 196c13-31 14-66 4-72-11-6-25 21-27 53" fill="#ffb3c7" stroke="none"/>
+      </g>
+
+      <!-- raised paw -->
+      <path d="M176 337c-31-8-48 12-38 36 8 20 31 25 46 11" fill="#fff4e3"/>
+      <path d="M174 351l-10 4M182 363l-10 5" stroke-width="6"/>
+
+      <!-- face -->
+      <circle cx="228" cy="269" r="8" fill="#17161a" stroke="none"/>
+      <circle cx="284" cy="269" r="8" fill="#17161a" stroke="none"/>
+      <path d="M256 286l-10 12h20Z" fill="#ff8fb8"/>
+      <path d="M256 298c0 10-9 14-17 10M256 298c0 10 9 14 17 10" stroke-width="6" fill="none"/>
+      <ellipse cx="207" cy="294" rx="17" ry="10" fill="#ffc2d2" stroke="none" opacity=".75"/>
+      <ellipse cx="305" cy="294" rx="17" ry="10" fill="#ffc2d2" stroke="none" opacity=".75"/>
+      <path d="M256 381c-27 0-45 16-45 38" stroke-width="7" fill="none" opacity=".35"/>
+    </g>
+
+    <ellipse cx="256" cy="466" rx="115" ry="17" fill="#14512c" opacity=".18"/>
+    <rect x="18" y="18" width="476" height="476" rx="100" fill="none" stroke="#17161a" stroke-width="7" opacity=".16"/>
+  </g>
+</svg>

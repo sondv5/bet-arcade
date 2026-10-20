@@ -1,0 +1,7 @@
+.wheel-root .game-hud {
+  pointer-events: none;
+}
+
+.wheel-root .stage-controls {
+  pointer-events: auto;
+}
