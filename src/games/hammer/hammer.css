@@ -1,0 +1,7 @@
+.hammer-root .game-hud {
+  pointer-events: none;
+}
+
+.hammer-root .stage-controls {
+  pointer-events: auto;
+}

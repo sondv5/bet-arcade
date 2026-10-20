@@ -1,0 +1,7 @@
+.plinko-root .game-hud {
+  pointer-events: none;
+}
+
+.plinko-root .stage-controls {
+  pointer-events: auto;
+}

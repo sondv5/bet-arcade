@@ -1,0 +1,7 @@
+.pairs-root .game-hud {
+  pointer-events: none;
+}
+
+.pairs-root .stage-controls {
+  pointer-events: auto;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "BÉT! — Random Picker & Team Maker",
+  "short_name": "BÉT!",
+  "description": "A tiny 3D world of party games: pick a person, find the last-place loser, or split teams. No arguments, last is last.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#7ed0ff",
+  "theme_color": "#7ed0ff",
+  "categories": ["games", "entertainment", "utilities"],
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "./icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Wheel of Goodbye", "url": "./#/game/wheel", "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Team Machine", "url": "./#/game/teams", "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

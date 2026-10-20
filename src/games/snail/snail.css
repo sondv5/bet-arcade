@@ -1,0 +1,35 @@
+.snail-root .game-hud {
+  pointer-events: none;
+}
+
+.snail-root .stage-controls,
+.snail-root .game-settings {
+  pointer-events: auto;
+}
+
+.snail-setting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 9px;
+}
+
+.snail-setting .hud-kicker {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.snail-setting .seg button {
+  min-width: 30px;
+}
+
+@media (max-width: 620px) {
+  .snail-setting {
+    gap: 6px;
+    padding: 5px 7px;
+  }
+
+  .snail-setting .hud-kicker {
+    display: none;
+  }
+}

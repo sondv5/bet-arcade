@@ -1,0 +1,30 @@
+.cards-root .game-hud {
+  pointer-events: none;
+}
+
+.cards-root .stage-controls {
+  pointer-events: auto;
+}
+
+.cards-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding-inline: 12px 15px;
+}
+
+.cards-turn-dot {
+  width: 9px;
+  height: 9px;
+  flex: none;
+  border: 1.5px solid var(--ink);
+  border-radius: 3px;
+  background: var(--turn-color);
+}
+
+@media (max-width: 620px) {
+  .cards-note {
+    gap: 6px;
+    padding: 6px 10px;
+  }
+}
