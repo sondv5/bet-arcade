@@ -1,0 +1,9 @@
+# Default owners for everything in the repository
+* @sondv5
+
+# Documentation
+/docs/ @sondv5
+*.md @sondv5
+
+# CI/CD and release automation
+/.github/ @sondv5

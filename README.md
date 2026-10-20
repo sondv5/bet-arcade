@@ -5,7 +5,9 @@
 **A tiny 3D world of party games.** Pick a person, find the last-place loser, or split the team — no arguments, last is last.
 
 [![Live Demo](https://img.shields.io/badge/live-sondv5.github.io%2Fbet--arcade-2ee6a6?style=for-the-badge)](https://sondv5.github.io/bet-arcade/)
+[![Release](https://img.shields.io/github/v/release/sondv5/bet-arcade?label=release&color=ff5f7e)](https://github.com/sondv5/bet-arcade/releases/latest)
 [![Deploy](https://github.com/sondv5/bet-arcade/actions/workflows/deploy.yml/badge.svg)](https://github.com/sondv5/bet-arcade/actions/workflows/deploy.yml)
+[![CI](https://github.com/sondv5/bet-arcade/actions/workflows/ci.yml/badge.svg)](https://github.com/sondv5/bet-arcade/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-9b7bff?style=for-the-badge)](LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/sondv5/bet-arcade?style=for-the-badge)](https://github.com/sondv5/bet-arcade/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/sondv5/bet-arcade?style=for-the-badge)](https://github.com/sondv5/bet-arcade/issues)
@@ -126,6 +128,8 @@ Two supported paths:
 
 Because the router is hash-based and `base` is set to `'./'`, the app works correctly from a sub-path such as `/bet-arcade/` with no extra configuration.
 
+> The `main` branch is protected: force pushes and deletions are blocked and history must stay linear, but direct pushes are still allowed so a solo maintainer can ship without ceremony.
+
 ---
 
 ## 🗂 Project structure
@@ -138,7 +142,15 @@ bet-arcade/
 │   └── sw.js               # Precache + runtime cache, offline support
 ├── scripts/
 │   ├── deploy-pages.mjs    # Builds and publishes to the gh-pages branch
-│   └── generate-icons.mjs  # Regenerates the PWA icon set
+│   ├── generate-icons.mjs  # Regenerates the PWA icon set
+│   └── generate-social-preview.mjs  # Renders the 1280×640 social preview
+├── .github/
+│   ├── ISSUE_TEMPLATE/     # Bug report + feature request forms
+│   ├── workflows/          # CI build check and Pages deployment
+│   ├── CODEOWNERS
+│   ├── dependabot.yml
+│   └── PULL_REQUEST_TEMPLATE.md
+├── docs/images/            # README screenshots + social preview
 ├── src/
 │   ├── components/         # Dashboard, HeroScene, AmbientScene, shell, modals
 │   ├── data/games.js       # Game registry (id, category, limits, component)
@@ -149,7 +161,6 @@ bet-arcade/
 │   ├── styles/             # base.css, home.css, game.css
 │   ├── App.jsx             # Hash router + game registry wiring
 │   └── main.jsx            # App bootstrap
-├── docs/images/            # README screenshots
 └── index.html
 ```
 
@@ -163,6 +174,17 @@ bet-arcade/
 4. Run `npm run dev` — the language appears in the switcher automatically.
 
 Missing keys fall back to English, so a partial translation never breaks the UI.
+
+---
+
+## 📦 Releases
+
+Stable builds are published on the [Releases page](https://github.com/sondv5/bet-arcade/releases). The current version lives in `CHANGELOG.md`, and the release notes follow the [Keep a Changelog](https://keepachangelog.com/) format.
+
+```bash
+git tag v1.1.0 && git push origin v1.1.0
+gh release create v1.1.0 --title "🎲 BÉT! v1.1.0" --notes-file RELEASE_NOTES.md
+```
 
 ---
 
